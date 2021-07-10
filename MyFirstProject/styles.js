@@ -17,7 +17,7 @@ export const styles =StyleSheet.create({
 
     textStyle2: {
         color: '#000',
-        fontSize: 23,
+        fontSize: 30,
         textAlign: 'center'
     },
 
