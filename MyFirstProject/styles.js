@@ -11,6 +11,14 @@ export const styles =StyleSheet.create({
 
     textStyle:{
         color: '#fff',
+        fontSize: 20,
+        textAlign: 'center'
+    },
+
+    textStyle2: {
+        color: '#000',
+        fontSize: 23,
+        textAlign: 'center'
     },
 
     footer: {
@@ -35,7 +43,7 @@ export const styles =StyleSheet.create({
     },
     side: {
         flex: 2,
-        alignContent: 'flex-start',
+        alignContent: 'center',
         justifyContent: 'center',
         backgroundColor: '#047a18'
     },
@@ -45,6 +53,15 @@ export const styles =StyleSheet.create({
         alignContent: 'center',
         justifyContent: 'center',
         backgroundColor: '#FF4FCB'
+    },
+
+    todoStyles: {
+        alignContent: "center",
+        borderColor: '#fff',
+        borderWidth: 1,
+        padding: 5,
+        borderRadius: 10,
+        margin: 5
     }
 
 
