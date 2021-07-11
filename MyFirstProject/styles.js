@@ -62,7 +62,8 @@ export const styles =StyleSheet.create({
         padding: 5,
         borderRadius: 10,
         margin: 5
-    }
+    },
+
+  });
 
 
-  })
