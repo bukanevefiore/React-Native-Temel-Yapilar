@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { Text, TouchableOpacity, View, } from 'react-native'
-import { styles } from './styles';
+import { styles } from '../styles';
 
 
-export default App = () => {
+export default SayacIleStateKavramıScreen = () => {
 
     const [sayi, setSayi] = useState(0);
 

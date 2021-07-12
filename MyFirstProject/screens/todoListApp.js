@@ -13,7 +13,7 @@ import { styles } from './styles';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { loding } from '../component/loding';
 
-export default App = () => {
+export default TodoListScreen = () => {
 
     let initTodoList = [
         { title: 'Yemek ye', complate: true },
@@ -63,6 +63,7 @@ export default App = () => {
         setTodoList(newList);
         setTodoTitle('');
         setLoding(false);
+        alert("Silme başarılı");
     }
 
     return (
