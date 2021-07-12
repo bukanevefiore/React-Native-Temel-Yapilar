@@ -1,9 +1,9 @@
 import React from 'react'
 import { Text, View, TouchableOpacity, SafeAreaView, ScrollView} from 'react-native'
-import { styles } from './styles'
+import { styles } from '../styles'
 
 
-export default App = () => {
+export default Flexbox = () => {
   
   // ekranı bölümlendirme
   return (

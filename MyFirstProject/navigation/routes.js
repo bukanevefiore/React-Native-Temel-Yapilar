@@ -1,35 +1,18 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
- 
-import React, { useState } from 'react';
-import Routes from './navigation/routes';
-
-export default App = () => {
-
-    return (
-       <Routes/>
-    );
-}
-
-/*
 import 'react-native-gesture-handler';
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import {  createStackNavigator} from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import HomeScreen from './screens/home';
-import DonguListMapScreen from './screens/Dongu_List_Map';
-import Flexbox from './screens/FlexBox';
-import SayacIleStateKavramıScreen from './screens/Sayac_ile_state_kavramı';
-import LoginFormIslemleriScreen from './screens/login_formIslemleri';
-import FormIslemleriScreen from './screens/textInput_form_islemleri';
-import TodoListScreen from './screens/todoListApp';
+import HomeScreen from '../screens/home';
+import DonguListMapScreen from '../screens/Dongu_List_Map';
+import Flexbox from '../screens/FlexBox';
+import SayacIleStateKavramıScreen from '../screens/Sayac_ile_state_kavramı';
+import LoginFormIslemleriScreen from '../screens/login_formIslemleri';
+import FormIslemleriScreen from '../screens/textInput_form_islemleri';
+import TodoListScreen from '../screens/todoListApp';
+import FlatListScreen from '../screens/flatList';
+import BottomNavigationScreen from '../screens/bottomNavigation';
 
 
 const Stack = createStackNavigator();
@@ -43,10 +26,13 @@ export default Routes = () => {
         <NavigationContainer>
             <Tab.Navigator >
              
+             
               <Tab.Screen name= "DonguListMap" component= {DonguListMapStack}></Tab.Screen>
               <Tab.Screen name= "TodoList" component= {TodoListStack}></Tab.Screen>
               <Tab.Screen name= "Sayac" component= {SayacStack}></Tab.Screen>
               <Tab.Screen name= "Login" component= {LoginStack}></Tab.Screen>
+              <Tab.Screen name= "FlatList" component= {FlatListStack}></Tab.Screen>
+              <Tab.Screen name= "FormIslemleri" component= {FormIslemleriStack}></Tab.Screen>
                
             </Tab.Navigator>
 
@@ -73,9 +59,9 @@ function FlexboxStack() {
                   options={{
                       title: "Container-Footer..",
                       headerStyle: {
-                          backgroundColor: '#f00',
+                          backgroundColor: '#000',
                       },
-                      headerTintColor: '#fff',
+                      headerTintColor: '#af0',
                       headerTitleStyle: {
                           fontWeight: 'bold',
                       },
@@ -93,9 +79,9 @@ function DonguListMapStack() {
                   options={{
                       title: "Dongu-List-Map-Yapiları",
                       headerStyle: {
-                          backgroundColor: '#f00',
+                          backgroundColor: '#000',
                       },
-                      headerTintColor: '#fff',
+                      headerTintColor: 'white',
                       headerTitleStyle: {
                           fontWeight: 'bold',
                       },
@@ -114,9 +100,9 @@ function LoginStack() {
                   options={{
                       title: "Login İşlemi",
                       headerStyle: {
-                          backgroundColor: '#f00',
+                          backgroundColor: '#000',
                       },
-                      headerTintColor: '#fff',
+                      headerTintColor: 'white',
                       headerTitleStyle: {
                           fontWeight: 'bold'
                       },
@@ -135,9 +121,9 @@ function FormIslemleriStack() {
                   options={{
                       title: "Form İşlemleri",
                       headerStyle: {
-                          backgroundColor: 'f00'
+                          backgroundColor: '#000'
                       },
-                      headerTintColor: '#fff',
+                      headerTintColor: 'white',
                       headerTitleStyle: {
                           fontWeight: 'bold'
                       },
@@ -156,9 +142,9 @@ function SayacStack() {
                   options= {{
                       title: "Sayac İle State Kavramı",
                       headerStyle: {
-                          backgroundColor: '#f00'
+                          backgroundColor: '#000'
                       },
-                      headerTintColor: '#fff',
+                      headerTintColor: 'white',
                       headerTitleStyle: {
                           fontWeight: 'bold'
                       },
@@ -177,9 +163,9 @@ function TodoListStack() {
                   options= {{
                       title: "TodoList Örneği",
                       headerStyle: {
-                          backgroundColor: '#f00',
+                          backgroundColor: '#000',
                       },
-                      headerTintColor: '#fff',
+                      headerTintColor: 'white',
                       headerTitleStyle: {
                           fontWeight: 'bold',
                       },
@@ -188,7 +174,49 @@ function TodoListStack() {
         </Stack.Navigator>
     )
 }
-*/
+
+function FlatListStack() {
+    return (
+        <Stack.Navigator>
+            <Stack.Screen
+                  name= "FlatList"
+                  component= {FlatListScreen}
+                  options= {{
+                      title: "FlatList Örneği",
+                      headerStyle: {
+                          backgroundColor: '#000',
+                      },
+                      headerTintColor: 'white',
+                      headerTitleStyle: {
+                          fontWeight: 'bold',
+                      },
+                  }}
+                />
+        </Stack.Navigator>
+    )
+}
+
+function BottomNavigationStack() {
+    return (
+        <Stack.Navigator>
+            <Stack.Screen
+                  name= "BattomNavigation"
+                  component= {BottomNavigationScreen}
+                  options= {{
+                      title: "TodoList Örneği",
+                      headerStyle: {
+                          backgroundColor: '#fff',
+                      },
+                      headerTintColor: '#0f0',
+                      headerTitleStyle: {
+                          fontWeight: 'bold',
+                      },
+                  }}
+                />
+        </Stack.Navigator>
+    )
+}
+
 
 
 

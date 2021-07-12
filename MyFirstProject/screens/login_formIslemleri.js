@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Text,View,TouchableOpacity, TextInput } from 'react-native';
-import { styles } from './styles';
+//import { styles } from './screens';
 
 
-export default App = () => {
+export default LoginFormIslemleriScreen = () => {
 
     const [mail, setMail] = useState('');
     const [sifre, setSifre] = useState('');
@@ -62,8 +62,9 @@ export default App = () => {
                 borderRadius: 20,
                 height: 50,
                 width: '100%',
+                alignItems: 'center'
             }}>
-                <Text style = {styles.textStyle2}>Giriş Yap</Text>
+                <Text style = {{fontSize: 25, alignContent: 'center', alignItems: 'center'}}>Giriş Yap</Text>
             </TouchableOpacity>
         </View>
 
