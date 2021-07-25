@@ -7,7 +7,7 @@
  */
  
 import React, { useState } from 'react';
-import Routes from './navigation/routes';
+import Routes from './src/navigation/routes';
 
 export default App = () => {
 
