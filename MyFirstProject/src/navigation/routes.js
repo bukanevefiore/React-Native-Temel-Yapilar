@@ -28,7 +28,8 @@ export default Routes = () => {
             <Tab.Navigator >
              
              
-              
+              <Tab.Screen name= "DonguListMap" component= {DonguListMapStack}></Tab.Screen>
+              <Tab.Screen name= "TodoList" component= {TodoListStack}></Tab.Screen>
               <Tab.Screen name= "Sayac" component= {SayacStack}></Tab.Screen>
               <Tab.Screen name= "Login" component= {LoginStack}></Tab.Screen>
               <Tab.Screen name= "FlatList" component= {FlatListStack}></Tab.Screen>
@@ -227,9 +228,9 @@ function CustomComponentVePropsYapisiStack() {
                   options= {{
                       title: "Custom Component - Props",
                       headerStyle: {
-                          backgroundColor: '#fff',
+                          backgroundColor: '#000',
                       },
-                      headerTintColor: '#0f0',
+                      headerTintColor: 'white',
                       headerTitleStyle: {
                           fontWeight: 'bold',
                       },

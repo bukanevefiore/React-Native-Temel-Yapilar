@@ -18,7 +18,7 @@ export default StyleSheet.create({
         marginBottom: 3,
     },
     text: {
-        fontSize: 10,
+        fontSize: 15,
         margin: 10,
         marginTop: 3,
     },
@@ -30,7 +30,7 @@ export default StyleSheet.create({
         borderBottomRightRadius: 10,
     },
     button_title: {
-        fontSize: 10,
+        fontSize: 15,
         fontWeight: 'bold',
         color: 'white',
     },

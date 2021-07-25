@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, text, SafeAreaView, TouchableOpacity } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
-//import styles from '../styles';
+//import styles from './styles';
 
 
 export default HomeScreen = () => {
