@@ -13,6 +13,7 @@ import FormIslemleriScreen from '../screens/textInput_form_islemleri';
 import TodoListScreen from '../screens/todoListApp';
 import FlatListScreen from '../screens/flatList';
 import BottomNavigationScreen from '../screens/bottomNavigation';
+import CustomComponentVePropsYapisiScreen from '../screens/Custom_Component_PropsYapisi';
 
 
 const Stack = createStackNavigator();
@@ -27,13 +28,13 @@ export default Routes = () => {
             <Tab.Navigator >
              
              
-              <Tab.Screen name= "DonguListMap" component= {DonguListMapStack}></Tab.Screen>
-              <Tab.Screen name= "TodoList" component= {TodoListStack}></Tab.Screen>
+              
               <Tab.Screen name= "Sayac" component= {SayacStack}></Tab.Screen>
               <Tab.Screen name= "Login" component= {LoginStack}></Tab.Screen>
               <Tab.Screen name= "FlatList" component= {FlatListStack}></Tab.Screen>
               <Tab.Screen name= "FormIslemleri" component= {FormIslemleriStack}></Tab.Screen>
-               
+              <Tab.Screen name= "CustomComponents" component= {CustomComponentVePropsYapisiStack}></Tab.Screen>
+
             </Tab.Navigator>
 
         </NavigationContainer>
@@ -204,6 +205,27 @@ function BottomNavigationStack() {
                   component= {BottomNavigationScreen}
                   options= {{
                       title: "TodoList Örneği",
+                      headerStyle: {
+                          backgroundColor: '#fff',
+                      },
+                      headerTintColor: '#0f0',
+                      headerTitleStyle: {
+                          fontWeight: 'bold',
+                      },
+                  }}
+                />
+        </Stack.Navigator>
+    )
+}
+
+function CustomComponentVePropsYapisiStack() {
+    return (
+        <Stack.Navigator>
+            <Stack.Screen
+                  name= "CustomComponents"
+                  component= {CustomComponentVePropsYapisiScreen}
+                  options= {{
+                      title: "Custom Component - Props",
                       headerStyle: {
                           backgroundColor: '#fff',
                       },
