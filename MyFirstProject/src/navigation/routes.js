@@ -1,7 +1,7 @@
 import 'react-native-gesture-handler';
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import {  createStackNavigator} from '@react-navigation/stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import HomeScreen from '../screens/home';
@@ -14,7 +14,17 @@ import TodoListScreen from '../screens/todoListApp';
 import FlatListScreen from '../screens/flatList';
 import BottomNavigationScreen from '../screens/bottomNavigation';
 import CustomComponentVePropsYapisiScreen from '../screens/Custom_Component_PropsYapisi';
+import CafeListWithStateKullanımScreen from '../screens/state_kullanim_cafe_ornegi';
+import LifecycleKullanımScreen from '../screens/lifecycleKullanım';
 
+
+/*
+
+ <Tab.Screen name="DonguListMap" component={DonguListMapStack}></Tab.Screen>
+ <Tab.Screen name="TodoList" component={TodoListStack}></Tab.Screen>
+ <Tab.Screen name="Sayac" component={SayacStack}></Tab.Screen>
+
+*/
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -26,15 +36,15 @@ export default Routes = () => {
     return (
         <NavigationContainer>
             <Tab.Navigator >
-             
-             
-              <Tab.Screen name= "DonguListMap" component= {DonguListMapStack}></Tab.Screen>
-              <Tab.Screen name= "TodoList" component= {TodoListStack}></Tab.Screen>
-              <Tab.Screen name= "Sayac" component= {SayacStack}></Tab.Screen>
-              <Tab.Screen name= "Login" component= {LoginStack}></Tab.Screen>
-              <Tab.Screen name= "FlatList" component= {FlatListStack}></Tab.Screen>
-              <Tab.Screen name= "FormIslemleri" component= {FormIslemleriStack}></Tab.Screen>
-              <Tab.Screen name= "CustomComponents" component= {CustomComponentVePropsYapisiStack}></Tab.Screen>
+
+
+            
+                <Tab.Screen name="Login" component={LoginStack}></Tab.Screen>
+                <Tab.Screen name="FlatList" component={FlatListStack}></Tab.Screen>
+                <Tab.Screen name="FormIslemleri" component={FormIslemleriStack}></Tab.Screen>
+                <Tab.Screen name="CustomComponents" component={CustomComponentVePropsYapisiStack}></Tab.Screen>
+                <Tab.Screen name="CafeListWithStateKullanım" component={CafeListWithStateKullanımStack}></Tab.Screen>
+                <Tab.Screen name="LifecycleKullanım" component={LifecycleKullanımStack}></Tab.Screen>
 
             </Tab.Navigator>
 
@@ -45,8 +55,8 @@ export default Routes = () => {
 function HomeStack() {
     return (
         <Stack.Navigator>
-            <Stack.Screen name="Home" component={HomeScreen} 
-            options={{ headerShown: false,}}></Stack.Screen>
+            <Stack.Screen name="Home" component={HomeScreen}
+                options={{ headerShown: false, }}></Stack.Screen>
 
         </Stack.Navigator>
     )
@@ -55,20 +65,20 @@ function HomeStack() {
 function FlexboxStack() {
     return (
         <Stack.Navigator>
-             <Stack.Screen
-                  name="FilexBox"
-                  component={Flexbox}
-                  options={{
-                      title: "Container-Footer..",
-                      headerStyle: {
-                          backgroundColor: '#000',
-                      },
-                      headerTintColor: '#af0',
-                      headerTitleStyle: {
-                          fontWeight: 'bold',
-                      },
-                  }}
-                />
+            <Stack.Screen
+                name="FilexBox"
+                component={Flexbox}
+                options={{
+                    title: "Container-Footer..",
+                    headerStyle: {
+                        backgroundColor: '#000',
+                    },
+                    headerTintColor: '#af0',
+                    headerTitleStyle: {
+                        fontWeight: 'bold',
+                    },
+                }}
+            />
         </Stack.Navigator>
     )
 }
@@ -76,19 +86,19 @@ function DonguListMapStack() {
     return (
         <Stack.Navigator>
             <Stack.Screen
-                  name="DonguListMap"
-                  component={DonguListMapScreen}
-                  options={{
-                      title: "Dongu-List-Map-Yapiları",
-                      headerStyle: {
-                          backgroundColor: '#000',
-                      },
-                      headerTintColor: 'white',
-                      headerTitleStyle: {
-                          fontWeight: 'bold',
-                      },
-                  }}
-                />
+                name="DonguListMap"
+                component={DonguListMapScreen}
+                options={{
+                    title: "Dongu-List-Map-Yapiları",
+                    headerStyle: {
+                        backgroundColor: '#000',
+                    },
+                    headerTintColor: 'white',
+                    headerTitleStyle: {
+                        fontWeight: 'bold',
+                    },
+                }}
+            />
         </Stack.Navigator>
     )
 }
@@ -97,19 +107,19 @@ function LoginStack() {
     return (
         <Stack.Navigator>
             <Stack.Screen
-                  name="Login"
-                  component={LoginFormIslemleriScreen}
-                  options={{
-                      title: "Login İşlemi",
-                      headerStyle: {
-                          backgroundColor: '#000',
-                      },
-                      headerTintColor: 'white',
-                      headerTitleStyle: {
-                          fontWeight: 'bold'
-                      },
-                  }}
-                />
+                name="Login"
+                component={LoginFormIslemleriScreen}
+                options={{
+                    title: "Login İşlemi",
+                    headerStyle: {
+                        backgroundColor: '#000',
+                    },
+                    headerTintColor: 'white',
+                    headerTitleStyle: {
+                        fontWeight: 'bold'
+                    },
+                }}
+            />
         </Stack.Navigator>
     )
 }
@@ -118,19 +128,19 @@ function FormIslemleriStack() {
     return (
         <Stack.Navigator>
             <Stack.Screen
-                  name= "FormIslemleri"
-                  component={FormIslemleriScreen}
-                  options={{
-                      title: "Form İşlemleri",
-                      headerStyle: {
-                          backgroundColor: '#000'
-                      },
-                      headerTintColor: 'white',
-                      headerTitleStyle: {
-                          fontWeight: 'bold'
-                      },
-                  }}
-                />
+                name="FormIslemleri"
+                component={FormIslemleriScreen}
+                options={{
+                    title: "Form İşlemleri",
+                    headerStyle: {
+                        backgroundColor: '#000'
+                    },
+                    headerTintColor: 'white',
+                    headerTitleStyle: {
+                        fontWeight: 'bold'
+                    },
+                }}
+            />
         </Stack.Navigator>
     )
 }
@@ -139,19 +149,19 @@ function SayacStack() {
     return (
         <Stack.Navigator>
             <Stack.Screen
-                  name= "Sayac"
-                  component={SayacIleStateKavramıScreen}
-                  options= {{
-                      title: "Sayac İle State Kavramı",
-                      headerStyle: {
-                          backgroundColor: '#000'
-                      },
-                      headerTintColor: 'white',
-                      headerTitleStyle: {
-                          fontWeight: 'bold'
-                      },
-                  }}
-                />
+                name="Sayac"
+                component={SayacIleStateKavramıScreen}
+                options={{
+                    title: "Sayac İle State Kavramı",
+                    headerStyle: {
+                        backgroundColor: '#000'
+                    },
+                    headerTintColor: 'white',
+                    headerTitleStyle: {
+                        fontWeight: 'bold'
+                    },
+                }}
+            />
         </Stack.Navigator>
     )
 }
@@ -160,19 +170,19 @@ function TodoListStack() {
     return (
         <Stack.Navigator>
             <Stack.Screen
-                  name= "TodoList"
-                  component= {TodoListScreen}
-                  options= {{
-                      title: "TodoList Örneği",
-                      headerStyle: {
-                          backgroundColor: '#000',
-                      },
-                      headerTintColor: 'white',
-                      headerTitleStyle: {
-                          fontWeight: 'bold',
-                      },
-                  }}
-                />
+                name="TodoList"
+                component={TodoListScreen}
+                options={{
+                    title: "TodoList Örneği",
+                    headerStyle: {
+                        backgroundColor: '#000',
+                    },
+                    headerTintColor: 'white',
+                    headerTitleStyle: {
+                        fontWeight: 'bold',
+                    },
+                }}
+            />
         </Stack.Navigator>
     )
 }
@@ -181,19 +191,19 @@ function FlatListStack() {
     return (
         <Stack.Navigator>
             <Stack.Screen
-                  name= "FlatList"
-                  component= {FlatListScreen}
-                  options= {{
-                      title: "FlatList Örneği",
-                      headerStyle: {
-                          backgroundColor: '#000',
-                      },
-                      headerTintColor: 'white',
-                      headerTitleStyle: {
-                          fontWeight: 'bold',
-                      },
-                  }}
-                />
+                name="FlatList"
+                component={FlatListScreen}
+                options={{
+                    title: "FlatList Örneği",
+                    headerStyle: {
+                        backgroundColor: '#000',
+                    },
+                    headerTintColor: 'white',
+                    headerTitleStyle: {
+                        fontWeight: 'bold',
+                    },
+                }}
+            />
         </Stack.Navigator>
     )
 }
@@ -202,19 +212,19 @@ function BottomNavigationStack() {
     return (
         <Stack.Navigator>
             <Stack.Screen
-                  name= "BattomNavigation"
-                  component= {BottomNavigationScreen}
-                  options= {{
-                      title: "TodoList Örneği",
-                      headerStyle: {
-                          backgroundColor: '#fff',
-                      },
-                      headerTintColor: '#0f0',
-                      headerTitleStyle: {
-                          fontWeight: 'bold',
-                      },
-                  }}
-                />
+                name="BattomNavigation"
+                component={BottomNavigationScreen}
+                options={{
+                    title: "TodoList Örneği",
+                    headerStyle: {
+                        backgroundColor: '#fff',
+                    },
+                    headerTintColor: '#0f0',
+                    headerTitleStyle: {
+                        fontWeight: 'bold',
+                    },
+                }}
+            />
         </Stack.Navigator>
     )
 }
@@ -223,20 +233,62 @@ function CustomComponentVePropsYapisiStack() {
     return (
         <Stack.Navigator>
             <Stack.Screen
-                  name= "CustomComponents"
-                  component= {CustomComponentVePropsYapisiScreen}
-                  options= {{
-                      title: "Custom Component - Props",
-                      headerStyle: {
-                          backgroundColor: '#000',
-                      },
-                      headerTintColor: 'white',
-                      headerTitleStyle: {
-                          fontWeight: 'bold',
-                      },
-                  }}
-                />
+                name="CustomComponents"
+                component={CustomComponentVePropsYapisiScreen}
+                options={{
+                    title: "Custom Component - Props",
+                    headerStyle: {
+                        backgroundColor: '#000',
+                    },
+                    headerTintColor: 'white',
+                    headerTitleStyle: {
+                        fontWeight: 'bold',
+                    },
+                }}
+            />
         </Stack.Navigator>
+    )
+}
+
+function CafeListWithStateKullanımStack() {
+    return (
+        <Stack.Navigator>
+            <Stack.Screen
+                name="CafeListWithStateKullanım"
+                component={CafeListWithStateKullanımScreen}
+                options={{
+                    title: "Cafe List İle State Kullanımı",
+                    headerStyle: {
+                        backgroundColor: '#000',
+                    },
+                    headerTintColor: 'white',
+                    headerTitleStyle: {
+                        fontWeight: 'bold',
+                    },
+                }}
+            />
+        </Stack.Navigator>
+    )
+}
+
+function LifecycleKullanımStack() {
+    return (
+        <Stack.Navigator>
+        <Stack.Screen
+          name="LifecycleKullanım"
+          component={LifecycleKullanımScreen}
+          options= {{
+              title: "Lifecycle Clean Yapısı",
+              headerStyle: {
+                  backgroundColor: '#000',
+              },
+              headerTintColor: 'white',
+              headerTitleStyle: {
+                  fontWeight: 'bold',
+              },
+          }}
+        />
+    </Stack.Navigator>
     )
 }
 
